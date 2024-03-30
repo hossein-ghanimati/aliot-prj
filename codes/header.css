@@ -1,0 +1,209 @@
+#check, .bar{
+    display: none;
+}
+@media screen and (min-width:1100px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        
+        background-color: #4a157980;
+        backdrop-filter: blur(10px);
+    }
+    header > label.logo{
+        margin-left: 50px;
+        font-size: 50px;
+        word-spacing: 10px;
+        font-weight: 900;
+        background-image: linear-gradient(90deg , #ff008c, #e100ff, #6f00ff, #22f1bd, #008cff, #00ffff, #ff008c, #e100ff, #6f00ff, #22f1bd, #008cff, #00ffff, #ff008c);
+        background-size: 500%;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: logo 20s linear infinite;
+    }
+    header > ul{
+        margin-right: 40px;
+        width: max-content;
+     
+    }
+    header > ul > li{
+        display: inline-block;
+        width: max-content;
+        margin-right: 80px;
+        
+    }
+    header> ul > li> a{
+        width: max-content;
+        
+        word-spacing: 5px;
+        
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+        transition: 1s;
+        position: relative;
+        
+    }
+    header> ul > li> a::before{
+        content: attr(data-text);
+        color: transparent;
+        background-image: linear-gradient(90deg , #008cff, #00ffff, #e100ff, #ff008c);
+        -webkit-background-clip: text;
+        font-size: 20px;
+        font-weight: 900;
+        transition: 0.5s;
+        width: 0;
+        white-space: nowrap;
+        position: absolute;
+        /* animation: a-animate 1s linear infinite; */
+    }
+    li:first-child > a{
+        background-image: linear-gradient(90deg , #008cff, #00ffff, #e100ff, #ff008c);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    header> ul > li> a:hover::before{
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1099px) {
+    header{
+        height: 80px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #2f0752;
+    }
+    .bar{
+        display: inline-block;
+        fill: white;
+        z-index: 5000;
+       position: absolute;
+       right:60px;
+       /* font-size: ; */
+    }
+    .bar> svg{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    .logo{
+        font-size: 70px;
+        background-image: linear-gradient(90deg , #ff008c, #e100ff, #6f00ff, #22f1bd, #008cff, #00ffff, #ff008c, #e100ff, #6f00ff, #22f1bd, #008cff, #00ffff, #ff008c);
+        background-size: 500%;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: logo 20s linear infinite;
+        font-weight: 600;
+    }
+    #check:checked ~ ul {
+        margin-right: 0;
+        opacity: 0.999;
+        
+        transition: 2s;
+    }
+    #check:checked ~ .bar > svg{
+        transition: 0.5s;
+        fill: #666;
+    }
+    ul{
+        position: absolute;
+        top: 0px;
+        right: 2px;
+        width: 35%;
+        background-color: #00000056;
+        backdrop-filter: blur(2px);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-right: -50%;
+        transition: 2s;
+        opacity: 0;
+        z-index: 1000;
+        height: 100vh;
+        
+    }
+    li:first-child{
+        margin-top:80px
+    }
+    li{
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        transition: 1s;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    li:not(:last-child){
+        border-bottom: 4px solid white;
+    }
+    /* li:first-child, li:hover{
+        background-color: yellowgreen;
+        transition: 0.7s;
+    } */
+    li:first-child, li:hover:not(:last-child){
+        border-bottom: 4px solid #6f00ff;
+        transition: 0.8s
+    }
+    header> ul > li> a{
+        
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    header> ul > li> a::before{
+        content: attr(data-text);
+        color: transparent;
+        background-image: linear-gradient(90deg , #ea00ff, #ffe600, #e100ff, #ff008c);
+        -webkit-background-clip: text;
+        font-size: 20px;
+        font-weight: 900;
+        transition: 0.5s;
+        width: 0;
+        white-space: nowrap;
+        position: absolute;
+        /* animation: a-animate 1s linear infinite; */
+    }
+    li:first-child > a{
+        background-image: linear-gradient(90deg , #ea00ff, #ffe600, #e100ff, #ff008c);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    header> ul > li:hover> a::before{
+        width: 100%;
+    }
+
+    
+}
+
+
+@media screen and (max-width:500px) {
+    .logo{
+        position: absolute;
+        left: 2px;
+    }
+    .bar{
+        right: 10px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .logo{
+        font-size: 45px;
+    }
+    .bar > svg {
+        width: 30px;
+        height: 30px;
+    }
+}

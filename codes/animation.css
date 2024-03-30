@@ -1,0 +1,62 @@
+@keyframes logo {
+    0%{
+        background-position: 0 0;
+
+    }
+    100%{
+        background-position: 500% 0;
+    }
+    
+}
+
+@keyframes icon{
+    0%{
+        transform: rotate(0turn);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes pic {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    30%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80%{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+        
+    }
+    
+}
